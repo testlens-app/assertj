@@ -26,6 +26,7 @@ jobs:
           distribution: 'zulu'
           java-version: '25'
           cache: 'maven'
+      - uses: testlens-app/setup-testlens@maven-support
 
       - name: Checkout `${{ github.base_ref }}` into subfolder
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -56,6 +57,7 @@ jobs:
           distribution: 'zulu'
           java-version: '25'
           cache: 'maven'
+      - uses: testlens-app/setup-testlens@maven-support
 
       - name: Compare with the latest release
         run: >
