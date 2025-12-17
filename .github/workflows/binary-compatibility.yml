@@ -27,6 +27,8 @@ jobs:
           java-version: '25'
           cache: 'maven'
       - uses: testlens-app/setup-testlens@maven-support
+        with:
+          instrumentation-version: '1.5.1-SNAPSHOT'
 
       - name: Checkout `${{ github.base_ref }}` into subfolder
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -58,6 +60,8 @@ jobs:
           java-version: '25'
           cache: 'maven'
       - uses: testlens-app/setup-testlens@maven-support
+        with:
+          instrumentation-version: '1.5.1-SNAPSHOT'
 
       - name: Compare with the latest release
         run: >

@@ -29,6 +29,8 @@ jobs:
           java-version: '25'
           cache: 'maven'
       - uses: testlens-app/setup-testlens@maven-support
+        with:
+          instrumentation-version: '1.5.1-SNAPSHOT'
       - name: Test
         run: ./mvnw $MAVEN_ARGS verify
       - name: Publish Test Report
@@ -56,6 +58,8 @@ jobs:
           release: ${{ matrix.java }}
           version: latest
       - uses: testlens-app/setup-testlens@maven-support
+        with:
+          instrumentation-version: '1.5.1-SNAPSHOT'
       - name: Test
         run: ./mvnw $MAVEN_ARGS verify
 
@@ -78,6 +82,8 @@ jobs:
           java-version: '25'
           cache: 'maven'
       - uses: testlens-app/setup-testlens@maven-support
+        with:
+          instrumentation-version: '1.5.1-SNAPSHOT'
       - name: Test
         run: ./mvnw $MAVEN_ARGS -Dgroovy.version=${{ matrix.groovy }} verify
 
@@ -100,6 +106,8 @@ jobs:
           java-version: '25'
           cache: 'maven'
       - uses: testlens-app/setup-testlens@maven-support
+        with:
+          instrumentation-version: '1.5.1-SNAPSHOT'
       - name: Test
         run: ./mvnw $MAVEN_ARGS -Dkotlin.version=${{ matrix.kotlin }} verify
 
@@ -136,6 +144,8 @@ jobs:
           java-version: '25'
           cache: 'maven'
       - uses: testlens-app/setup-testlens@maven-support
+        with:
+          instrumentation-version: '1.5.1-SNAPSHOT'
       - name: Test with Sonar
         run: >
           ./mvnw $MAVEN_ARGS verify sonar:sonar
