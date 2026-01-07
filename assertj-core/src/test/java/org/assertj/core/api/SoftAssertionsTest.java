@@ -176,7 +176,7 @@ class SoftAssertionsTest extends BaseAssertionsTest {
 
   @Test
   void all_assertions_should_pass() {
-    softly.assertThat(1).isEqualTo(1);
+    softly.assertThat(1).isEqualTo(42);
     softly.assertThat(Lists.newArrayList(1, 2)).containsOnly(1, 2);
     softly.assertAll();
   }
